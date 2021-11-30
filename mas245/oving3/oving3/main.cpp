@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 // Oppgave 1
 bool askUserForYesNoInput();
@@ -9,9 +10,7 @@ void problemsAndAnswers(int x);
 
 // Oppgave 3
 void vendingMachine();
-void presentSodaMenu();
-
-
+void presentSodaMenu(const std::string brus[], const unsigned int pris[]);
 
 int oppgave1(){
 // Oppgave 1.1
@@ -40,7 +39,7 @@ int main()
     // 6 løkker tror jeg
 
     // Oppgave 2.2
-    problemSolvingChart();
+    //problemSolvingChart();
 
     // Oppgave 2.3
     /* Trenger mange tester... Kommer ikke gjennom alle på en run, man må prøve flere ganger. */
@@ -49,8 +48,13 @@ int main()
 
     const std::string brusTyper[] = {"cola", "pepsi", "fanta", "solo", "grimstadbrus"};
     const unsigned int brusPriser[] = {20, 21, 22, 23, 24};
+
+    presentSodaMenu(brusTyper, brusPriser);
+    vendingMachine();
     return 0;
 }
+
+
 
 
 bool askUserForYesNoInput()
@@ -194,7 +198,20 @@ void problemsAndAnswers(int x)
     }
 }
 
-void presentSodaMenu(std::string brusTyper)
+
+void presentSodaMenu(const std::string brus[], const unsigned int pris[])
 {
-    std::cout << brusTyper << std::endl;
+    std::cout << "*************" << std::endl;
+    std::cout << "Brusmeny: " << std::endl;
+    for (int i = 0;i<5;i++) {
+        std::cout << i << ": " << brus[i] << ", " << pris[i] << ",-" << std::endl;
+    }
+    std::cout << "*************" << std::endl;
+    std::cout << "Velg nummer på brusen du vil kjøpe:" << std::endl;
+}
+
+void vendingMachine(){
+    int s;
+    std::cin >> s;
+    std::cout << "Du valgte: " << s << , "vennligst legg på " << pris << ",-" << std::endl;
 }
