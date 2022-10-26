@@ -32,25 +32,27 @@ return 0;
 
 int main()
 {
-    // Oppgave 1
-    //oppgave1();
+//    // Oppgave 1
+//    //oppgave1();
 
-    // Oppgave 2.1
-    // 6 løkker tror jeg
+//    // Oppgave 2.1
+//    // 6 løkker tror jeg
 
-    // Oppgave 2.2
-    //problemSolvingChart();
+//    // Oppgave 2.2
+//problemSolvingChart();
 
-    // Oppgave 2.3
-    /* Trenger mange tester... Kommer ikke gjennom alle på en run, man må prøve flere ganger. */
+//    // Oppgave 2.3
+//    /* Trenger mange tester... Kommer ikke gjennom alle på en run, man må prøve flere ganger. */
 
-    // Oppgave 3.1
+//    // Oppgave 3.1
 
-    const std::string brusTyper[] = {"cola", "pepsi", "fanta", "solo", "grimstadbrus"};
-    const unsigned int brusPriser[] = {20, 21, 22, 23, 24};
+//    const std::string brusTyper[] = {"cola", "pepsi", "fanta", "solo", "grimstadbrus"};
+//    const unsigned int brusPriser[] = {20, 21, 22, 23, 24};
 
-    presentSodaMenu(brusTyper, brusPriser);
-    vendingMachine();
+//    presentSodaMenu(brusTyper, brusPriser);
+//    vendingMachine();
+
+    askUserForYesNoInput();
     return 0;
 }
 
@@ -62,14 +64,14 @@ bool askUserForYesNoInput()
     bool ans = false;
 
     char s;
-    std::cout << "Yes/No?" << std::endl;
+    std::cout << "Y/N?" << std::endl;
     std::cin >> s;
     std::cout << "Du valgte: " << s << std::endl;
 
-    if(s == 'y' || s == 'Y')
+    if(s == "yes" || s == "Yes")
     {
     ans = true;
-    }else if(s == 'n' || s == 'N')
+    }else if(s == "no" || s == "No")
     {
     ans = false;
     }else
@@ -82,7 +84,7 @@ bool askUserForYesNoInput()
 
 bool problemSolvingChart()
 {
-    bool problem = false;
+    bool problem = false; //
     char s;
     problemsAndAnswers(1); // Does it work?
     std::cin >> s;
@@ -210,8 +212,8 @@ void presentSodaMenu(const std::string brus[], const unsigned int pris[])
     std::cout << "Velg nummer på brusen du vil kjøpe:" << std::endl;
 }
 
-void vendingMachine(){
-    int s;
-    std::cin >> s;
-    std::cout << "Du valgte: " << s << , "vennligst legg på " << pris << ",-" << std::endl;
-}
+//void vendingMachine(){
+//    int s;
+//    std::cin >> s;
+//    std::cout << "Du valgte: " << s << , "vennligst legg på " << pris << ",-" << std::endl;
+//}

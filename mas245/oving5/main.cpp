@@ -6,21 +6,12 @@
 int main()
 {
     Cat pus;
+    Cat katt;
+    Cat pusur;
 
-    IAnimal& pus_ref = pus;
+    pus.setAge(10);
+    pus.printAge();
 
-    pus_ref.move();
-
-    pus.move();
-
-    Position pos(5,2);
-
-    pos.getXPosition();
-    pos.getYPosition();
-
-    pos.setXPosition(7);
-
-    pos.getXPosition();
 
     return 0;
 
